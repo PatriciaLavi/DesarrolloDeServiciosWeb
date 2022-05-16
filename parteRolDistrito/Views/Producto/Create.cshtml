@@ -1,0 +1,63 @@
+﻿@model parteRolDistrito.Models.ProductoModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1 class="text-center">Registro de producto</h1>
+
+<h4>Producto</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="nom_producto" class="control-label"></label>
+                <input asp-for="nom_producto" class="form-control" />
+                <span asp-validation-for="nom_producto" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="precio" class="control-label"></label>
+                <input asp-for="precio" class="form-control" />
+                <span asp-validation-for="precio" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ruta_imagen" class="control-label"></label>
+                <input asp-for="ruta_imagen" class="form-control" />
+                <span asp-validation-for="ruta_imagen" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="nombre_imagen" class="control-label"></label>
+                <input asp-for="nombre_imagen" class="form-control" />
+                <span asp-validation-for="nombre_imagen" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="id_categoria" class="control-label"></label>
+                <input asp-for="id_categoria" class="form-control" />
+                <span asp-validation-for="id_categoria" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="stock" class="control-label"></label>
+                <input asp-for="stock" class="form-control" />
+                <span asp-validation-for="stock" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="activo" class="control-label"></label>
+                <input asp-for="activo" class="form-control" />
+                <span asp-validation-for="activo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <a asp-action="Create" asp-controller="Producto" class="btn btn-primary">Nuevo</a>
+                <input type="submit" value="Guardar" class="btn btn-primary" />
+                <a asp-action="ListadoProductos" asp-controller="Producto" class="btn btn-primary">Retornar</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>@ViewBag.mensaje</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

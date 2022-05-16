@@ -1,0 +1,41 @@
+﻿@model IEnumerable<parteRolDistrito.Models.DistritoModel>
+
+@{
+    ViewData["Title"] = "ListadoDistritos";
+}
+
+<h1 class="text-center">Listado de Distrito</h1>
+
+<p>
+    <a class="btn btn-primary" asp-action="Create">Nuevo</a>
+</p>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.idDistrito)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.nomDistrito)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.idDistrito)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.nomDistrito)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id=item.idDistrito })
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ })
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

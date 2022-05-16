@@ -1,0 +1,33 @@
+﻿@model parteRolDistrito.Models.DistritoModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1 class="text-center">REGISTRO DE DISTRITOS</h1>
+
+<h4 class="text-center">Distritos</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="nomDistrito" class="control-label"></label>
+                <input asp-for="nomDistrito" class="form-control" />
+                <span asp-validation-for="nomDistrito" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <a asp-action="Create" asp-controller="Distrito" class="btn btn-primary">Nuevo</a>
+                <input type="submit" value="Guardar" class="btn btn-primary" />
+                <a asp-action="ListadoDistritos" asp-controller="Distrito" class="btn btn-primary">Retornar</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>@ViewBag.mensaje</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

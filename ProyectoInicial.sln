@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32413.511
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "parteRolDistrito", "parteRolDistrito\parteRolDistrito.csproj", "{AA7AAEC6-6B62-4553-807E-08BC19A125DC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AA7AAEC6-6B62-4553-807E-08BC19A125DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA7AAEC6-6B62-4553-807E-08BC19A125DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA7AAEC6-6B62-4553-807E-08BC19A125DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA7AAEC6-6B62-4553-807E-08BC19A125DC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {03CA6EFA-E209-4CF3-8FE0-5E1DA90CD645}
+	EndGlobalSection
+EndGlobal
